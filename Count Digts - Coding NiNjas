@@ -1,0 +1,21 @@
+public class Solution {
+    public static int countDigits(int n){
+        // Write your code here.
+        int answer = 0;
+
+        int indDigits = n;
+
+        while(indDigits>0){
+            int single = indDigits%10;
+
+            if(single != 0 && n%single == 0){
+                answer++;
+            }
+
+            indDigits = indDigits/10;
+
+        }
+
+        return answer;
+    }
+}
