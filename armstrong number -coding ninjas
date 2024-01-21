@@ -1,0 +1,12 @@
+//logic alone
+
+int inputNum = n;
+int armstrongedNumber = 0;
+while (inputNum > 0) {
+    int power = (int) (Math.log10(n) + 1);
+    int lastDigit = inputNum % 10;
+    armstrongedNumber += Math.pow(lastDigit, power);
+    inputNum = inputNum / 10;
+}
+
+return armstrongedNumber == n;
