@@ -1,0 +1,21 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+
+        if(x<0){
+            return false;
+        }
+        int inputNum = x;
+        int reversedNumber = 0;
+        while(inputNum != 0){
+            int lastDigit = inputNum%10;
+            reversedNumber = reversedNumber * 10 + lastDigit;
+            inputNum = inputNum/10;
+        }
+
+        if(x == reversedNumber) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
