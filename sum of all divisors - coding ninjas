@@ -1,0 +1,19 @@
+public class Solution {
+    public static int sumOfAllDivisors(int n){
+        // Write your code here.
+        int totalSum = 0;
+
+        for(int i=1;i<=n;i++){
+ 
+            for(int j=1;j*j<=i;j++){
+                if(i%j == 0){
+                    totalSum += j;
+                    if(j != i/j) totalSum += i/j;
+                } 
+            }
+
+        }
+
+        return totalSum;
+    }
+}
