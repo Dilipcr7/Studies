@@ -1,0 +1,17 @@
+public class Solution {
+    public static int calcGCD(int n, int m){
+        // Write your code here.
+
+        int lowest = Math.min(n,m);
+        int gcd = 1;
+        for(int i=1;i<=lowest;i++){ //
+            if(n%i == 0 && m%i==0){
+                gcd = i; //1
+                
+            }
+        }
+
+        return gcd;
+        
+    }
+}
